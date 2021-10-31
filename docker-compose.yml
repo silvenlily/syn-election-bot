@@ -1,6 +1,7 @@
 services:
   syn_ai:
     build: .
+    restart: unless-stopped
     links:
       - syn_ai_redis_db
       - syn_ai_mongo_db
