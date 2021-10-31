@@ -1,0 +1,26 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.tabSize": 2,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.printWidth": 121
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-vsliveshare.vsliveshare",
+      "esbenp.prettier-vscode",
+      "aaron-bond.better-comments",
+      "ritwickdey.liveserver",
+      "ms-azuretools.vscode-docker",
+      "ms-vscode-remote.remote-wsl",
+      "ms-vscode-remote.remote-containers"
+    ]
+  }
+}

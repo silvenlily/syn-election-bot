@@ -1,0 +1,11 @@
+node_modules
+logs
+build
+voluptas.code-workspace
+npm-debug.log
+.vscode
+.env-example
+.gitlab-ci.yml
+.gitignore
+yarn.lock
+package-lock.json
