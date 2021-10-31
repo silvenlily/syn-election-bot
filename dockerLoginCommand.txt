@@ -1,0 +1,1 @@
+sudo docker login -u syn-ai-deploytoken-1 -p nEy1FVUAyEnpZ9ASXs2j registry.gitlab.com

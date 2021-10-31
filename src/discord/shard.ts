@@ -33,7 +33,12 @@ let scheduler = new EventScheduler(10000);
 bot.on("ready", async () => {
   console.log("Connected to discord");
 
-  let commandLib = new SlashLib(bot, "743250557187129418");
+  let debugServer;
+  if (settings.debug) {
+    debugServer = "743250557187129418";
+  }
+
+  let commandLib = new SlashLib(bot, debugServer);
   createCommands(commandLib, cache, store, bot, settings, scheduler);
   commandLib.registerCommands();
 

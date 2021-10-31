@@ -8,6 +8,5 @@ build:
   before_script:
     - docker login --username "$CI_REGISTRY_USER" --password "$CI_REGISTRY_PASSWORD" registry.gitlab.com
   script:
-    - docker info
     - docker build -t registry.gitlab.com/silver_lily/syndi-ai .
     - docker push registry.gitlab.com/silver_lily/syndi-ai
