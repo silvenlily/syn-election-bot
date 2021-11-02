@@ -18,6 +18,7 @@ function createCommands(
   settings: Config,
   scheduler: EventScheduler
 ) {
+  console.log("creating commands");
   slashLib.createCommand(ps2Map.command, ps2Map.handler, {
     store: store,
     cache: cache,

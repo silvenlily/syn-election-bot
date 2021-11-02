@@ -9,4 +9,4 @@ npm-debug.log
 .gitignore
 yarn.lock
 package-lock.json
-deployToken.txt
+deploy notes.txt

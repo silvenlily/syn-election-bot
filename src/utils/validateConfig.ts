@@ -10,7 +10,6 @@ type Config = {
   devMode: boolean;
   appID: string;
   adminIds: string[];
-  debug?: boolean;
 };
 
 function assertEnvVarExists(setting: string) {
@@ -48,7 +47,6 @@ function validateConfig() {
       census: process.env.CENSUS_SERVICE_ID!,
     },
     devMode: Boolean(process.env.DEV_MODE),
-    debug: Boolean(process.env.DEBUG),
     appID: process.env.APP_ID!,
     adminIds: adminIds,
   };

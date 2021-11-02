@@ -149,7 +149,7 @@ export default async function handleVoteModal(args: args) {
       if (e.id == state.selected.id) return true;
     })!.name;
     updateModal(interaction, state);
-    let remTime = (state.expireAt - Date.now()) / 1000;
+    let remTime = Math.round((state.expireAt - Date.now()) / 1000);
     cache.setex(`elections:voteModals:${interaction.user.id}`, remTime, JSON.stringify(state));
     return;
   }
@@ -172,7 +172,7 @@ export default async function handleVoteModal(args: args) {
     state.election.remainingCandidates.push(last);
     updateModal(interaction, state);
 
-    let remTime = (state.expireAt - Date.now()) / 1000;
+    let remTime = Math.round((state.expireAt - Date.now()) / 1000);
     cache.setex(`elections:voteModals:${interaction.user.id}`, remTime, JSON.stringify(state));
     return;
   }
@@ -189,7 +189,7 @@ export default async function handleVoteModal(args: args) {
 
     updateModal(interaction, state);
 
-    let remTime = (state.expireAt - Date.now()) / 1000;
+    let remTime = Math.round((state.expireAt - Date.now()) / 1000);
     cache.setex(`elections:voteModals:${interaction.user.id}`, remTime, JSON.stringify(state));
     return;
   }

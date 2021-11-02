@@ -5,4 +5,4 @@ package-lock.json
 yarn.lock
 notes
 config.env
-deployToken.txt
+deploy notes.txt

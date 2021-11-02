@@ -34,7 +34,7 @@ bot.on("ready", async () => {
   console.log("Connected to discord");
 
   let debugServer;
-  if (settings.debug) {
+  if (settings.devMode) {
     debugServer = "743250557187129418";
   }
 
