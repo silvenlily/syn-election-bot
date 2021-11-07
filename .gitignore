@@ -3,6 +3,6 @@ build/*
 config/*
 package-lock.json
 yarn.lock
-notes
+notes.txt
 config.env
 deploy notes.txt

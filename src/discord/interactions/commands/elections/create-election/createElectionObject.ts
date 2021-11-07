@@ -100,6 +100,18 @@ async function createElectionObject(interaction: CommandInteraction, store: Stor
     return;
   }
 
+  let numWinners = interaction.options.getNumber("winners", true);
+
+  if (numWinners < 1 || numWinners > 20) {
+    interaction.reply({
+      embeds: [
+        { title: "Could not create voting modal", description: "Elections must select between one and twenty winners" },
+      ],
+      ephemeral: true,
+    });
+    return;
+  }
+
   // shortcode
   electionCode = await electionCode;
 
@@ -112,6 +124,7 @@ async function createElectionObject(interaction: CommandInteraction, store: Stor
   }
 
   let election: Election = {
+    numWinners: numWinners,
     id: electionId,
     name: electionName,
     code: electionCode,

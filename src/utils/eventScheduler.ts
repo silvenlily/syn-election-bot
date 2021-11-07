@@ -8,7 +8,7 @@ export default class EventScheduler {
     this.tasks = {};
   }
   async addTask(func: Function, time: number, args: any) {
-    console.log(`adding task - time: ${time} - group ${Math.floor(time / this.schedulerDelay)}`);
+    //console.log(`adding task - time: ${time} - group ${Math.floor(time / this.schedulerDelay)}`);
     if (Date.now() > time) {
       func(args);
       return;
@@ -28,14 +28,14 @@ export default class EventScheduler {
   }
   async intervalHandler() {
     let taskGroup = Math.floor(Date.now() / this.schedulerDelay);
-    console.log(`schedular tick: ${taskGroup}`);
+    //console.log(`schedular tick: ${taskGroup}`);
     let tasks = this.tasks[taskGroup];
     if (tasks) {
       for (let i = 0; i < tasks.length; i++) {
         let task = tasks[i];
         let delay = task.time - Date.now();
         if (delay < 1) delay = 1;
-        console.log(`executing task in: ${delay}`);
+        //console.log(`executing task in: ${delay}`);
         setTimeout(() => {
           task.func(task.args);
         }, delay);

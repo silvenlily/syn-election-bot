@@ -15,6 +15,12 @@ let command: ChatInputApplicationCommandData = {
   options: [
     { name: "name", type: "STRING", description: "election name", required: true },
     {
+      name: "winners",
+      type: "NUMBER",
+      description: "number of winners to select",
+      required: true,
+    },
+    {
       name: "voting-start",
       type: "STRING",
       description: "format: 'dd/mm/yy hh:mm' timezone must be UTC",
