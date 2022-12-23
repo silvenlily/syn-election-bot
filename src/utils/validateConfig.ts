@@ -5,7 +5,6 @@ type Config = {
     discord: string;
     mongoDB: string;
     redis: string;
-    census: string;
   };
   devMode: boolean;
   appID: string;
@@ -26,7 +25,6 @@ function validateConfig() {
   dotenv.config({ path: "./config.env" });
 
   assertEnvVarExists("DISCORD_TOKEN");
-  assertEnvVarExists("CENSUS_SERVICE_ID");
   assertEnvVarExists("MONGODB_URL");
   assertEnvVarExists("REDIS_URL");
   assertEnvVarExists("APP_ID");
@@ -44,7 +42,6 @@ function validateConfig() {
       discord: process.env.DISCORD_TOKEN!,
       mongoDB: process.env.MONGODB_URL!,
       redis: process.env.REDIS_URL!,
-      census: process.env.CENSUS_SERVICE_ID!,
     },
     devMode: Boolean(process.env.DEV_MODE),
     appID: process.env.APP_ID!,
