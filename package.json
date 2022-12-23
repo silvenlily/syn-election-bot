@@ -26,8 +26,7 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "@silver_lily/census-lib": "^2.0.0",
-    "@silver_lily/slash-lib": "^1.1.9",
+    "@silver_lily/slash-lib": "silvenlily/slash-lib",
     "@types/number-to-words": "^1.2.1",
     "axios": "^0.21.1",
     "discord.js": "^13.1.0",

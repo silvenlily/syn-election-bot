@@ -6,3 +6,4 @@ yarn.lock
 notes.txt
 config.env
 deploy notes.txt
+yarn-error.log
