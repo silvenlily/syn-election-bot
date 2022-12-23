@@ -1,6 +1,6 @@
 import { Intents, Client } from "discord.js";
 import Redis from "redis";
-import SlashLib from "@silver_lily/slash-lib";
+import SlashLib from "silver-lily-slash-lib"
 
 import Store from "../utils/store";
 import createCommands from "./createCommands";

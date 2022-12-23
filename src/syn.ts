@@ -17,7 +17,7 @@ let shard = child.fork(`./${env}/discord/shard`);
 shard.on("exit", (code) => {
   console.log(`discord shard exit with code: ${code}`);
   if (code && code != 0) {
-    ps2.kill();
+    //ps2.kill();
     process.exit(code);
   }
 });

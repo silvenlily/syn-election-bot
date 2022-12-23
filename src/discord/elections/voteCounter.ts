@@ -1,5 +1,5 @@
 import { randomBytes } from "crypto";
-import { Snowflake } from "discord-api-types";
+import { Snowflake } from "discord.js";
 import { ContextMenuInteraction } from "discord.js";
 import md5 from "md5";
 import { resolve } from "path/posix";

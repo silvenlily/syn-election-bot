@@ -1,4 +1,4 @@
-import type SlashLib from "@silver_lily/slash-lib";
+import type SlashLib from "silver-lily-slash-lib";
 import type Store from "../utils/store";
 import type { Client } from "discord.js";
 import type { RedisClient } from "redis";
@@ -8,7 +8,6 @@ import type EventScheduler from "../utils/eventScheduler";
 import createElection from "./interactions/commands/elections/create-election/create-election";
 import createVoteModal from "./interactions/commands/elections/createStartVotingModal/create-startVotingModal";
 import canadates from "./interactions/commands/elections/canadates/canadates";
-import ps2Map from "./interactions/commands/ps2Map/ps2Map";
 import countVotes from "./interactions/commands/elections/count-votes/count-votes";
 
 function createCommands(
@@ -22,13 +21,6 @@ function createCommands(
   console.log("creating commands");
   slashLib.createCommand(countVotes.command, countVotes.handler, {
     store: store,
-  });
-
-  slashLib.createCommand(ps2Map.command, ps2Map.handler, {
-    store: store,
-    cache: cache,
-    bot: bot,
-    settings: settings,
   });
 
   slashLib.createCommand(createElection.command, createElection.handler, {

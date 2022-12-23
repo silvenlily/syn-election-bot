@@ -1,3 +1,4 @@
+/*
 import { eventsApi, util } from "@silver_lily/census-lib";
 
 let census = new eventsApi.Client({ serviceID: "Tiyu0LkHBENDh6uo" });
@@ -21,3 +22,4 @@ census.on("ContinentUnlock", (e) => {
 census.on("MetagameEvent", (e) => {
   console.log(`[ps2 event] - Metagame Event: ${e.world_id} - ${e.metagame_event_id} - ${e.metagame_event_state}`);
 });
+*/

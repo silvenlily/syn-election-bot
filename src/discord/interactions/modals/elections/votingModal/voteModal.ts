@@ -6,7 +6,7 @@ import type {
   MessageComponentInteraction,
   SelectMenuInteraction,
   Snowflake,
-  TextBasedChannels,
+  TextBasedChannel,
 } from "discord.js";
 
 import { MessageActionRow, MessageSelectMenu, MessageButton } from "discord.js";
