@@ -4,7 +4,6 @@ WORKDIR /usr/src/syn
 RUN mkdir build
 
 COPY package.json .
-COPY ./.npmrc .
 
 RUN yarn install
 
